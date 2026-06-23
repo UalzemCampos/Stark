@@ -571,23 +571,28 @@ button {
 
   .header__nav-list {
     flex-direction: column;
-    gap: 12px;
+    gap: 4px;
     width: 100%;
-    max-width: 320px;
+    max-width: 360px;
     padding: 0 24px;
-    align-items: center;
-    text-align: center;
+    list-style: none;
+  }
+
+  .header__nav-list li {
+    width: 100%;
   }
 
   .header__nav-link {
-    font-size: 1.6rem;
+    font-size: 1.25rem;
     font-family: var(--font-heading);
-    font-weight: 700;
+    font-weight: 600;
     color: var(--color-text-2);
-    padding: 12px 24px;
+    padding: 14px 24px;
     border-radius: var(--radius-md);
     width: 100%;
     display: block;
+    text-align: center;
+    letter-spacing: 0.03em;
     transition: all var(--trans-base);
   }
 
@@ -612,9 +617,9 @@ button {
 
   .header__nav .mobile-cta {
     display: block;
-    margin-top: 16px;
+    margin-top: 24px;
     width: 100%;
-    max-width: 320px;
+    max-width: 360px;
     text-align: center;
   }
 }
