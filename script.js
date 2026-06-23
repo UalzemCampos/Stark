@@ -134,12 +134,12 @@ function initCounters() {
       const progress = Math.min(elapsed / duration, 1);
       const value    = Math.floor(easeOut(progress) * target);
 
-      counter.textContent = prefix + value + (suffix ? ' ' + suffix : '');
+      counter.textContent = value;
 
       if (progress < 1) {
         requestAnimationFrame(update);
       } else {
-        counter.textContent = prefix + target + (suffix ? ' ' + suffix : '');
+        counter.textContent = target;
       }
     };
 
