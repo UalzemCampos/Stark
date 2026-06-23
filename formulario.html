@@ -39,44 +39,36 @@
 
           <form id="contactForm" style="display:flex;flex-direction:column;gap:20px;">
 
-            <div style="display:grid;grid-template-columns:1fr;gap:20px;">
-              <div style="display:flex;flex-direction:column;gap:6px;">
-                <label for="nome" style="font-size:0.85rem;font-weight:600;color:var(--color-text-2);">Nome completo *</label>
-                <input type="text" id="nome" name="nome" required
-                  style="padding:14px 18px;border-radius:var(--radius-md);border:1px solid var(--color-border-2);background:var(--color-surface);color:var(--color-text);font-family:var(--font-body);font-size:0.95rem;outline:none;transition:border-color var(--trans-base);" />
+            <div class="form-field">
+              <label for="nome">Nome completo *</label>
+              <input type="text" id="nome" name="nome" required />
+            </div>
+
+            <div class="form-row form-row--split">
+              <div class="form-field">
+                <label for="empresa">Empresa *</label>
+                <input type="text" id="empresa" name="empresa" required />
+              </div>
+              <div class="form-field">
+                <label for="cargo">Cargo *</label>
+                <input type="text" id="cargo" name="cargo" required />
               </div>
             </div>
 
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
-              <div style="display:flex;flex-direction:column;gap:6px;">
-                <label for="empresa" style="font-size:0.85rem;font-weight:600;color:var(--color-text-2);">Empresa *</label>
-                <input type="text" id="empresa" name="empresa" required
-                  style="padding:14px 18px;border-radius:var(--radius-md);border:1px solid var(--color-border-2);background:var(--color-surface);color:var(--color-text);font-family:var(--font-body);font-size:0.95rem;outline:none;transition:border-color var(--trans-base);" />
+            <div class="form-row form-row--split">
+              <div class="form-field">
+                <label for="email">E-mail corporativo *</label>
+                <input type="email" id="email" name="email" required />
               </div>
-              <div style="display:flex;flex-direction:column;gap:6px;">
-                <label for="cargo" style="font-size:0.85rem;font-weight:600;color:var(--color-text-2);">Cargo *</label>
-                <input type="text" id="cargo" name="cargo" required
-                  style="padding:14px 18px;border-radius:var(--radius-md);border:1px solid var(--color-border-2);background:var(--color-surface);color:var(--color-text);font-family:var(--font-body);font-size:0.95rem;outline:none;transition:border-color var(--trans-base);" />
+              <div class="form-field">
+                <label for="celular">Celular *</label>
+                <input type="tel" id="celular" name="celular" required />
               </div>
             </div>
 
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
-              <div style="display:flex;flex-direction:column;gap:6px;">
-                <label for="email" style="font-size:0.85rem;font-weight:600;color:var(--color-text-2);">E-mail corporativo *</label>
-                <input type="email" id="email" name="email" required
-                  style="padding:14px 18px;border-radius:var(--radius-md);border:1px solid var(--color-border-2);background:var(--color-surface);color:var(--color-text);font-family:var(--font-body);font-size:0.95rem;outline:none;transition:border-color var(--trans-base);" />
-              </div>
-              <div style="display:flex;flex-direction:column;gap:6px;">
-                <label for="celular" style="font-size:0.85rem;font-weight:600;color:var(--color-text-2);">Celular *</label>
-                <input type="tel" id="celular" name="celular" required
-                  style="padding:14px 18px;border-radius:var(--radius-md);border:1px solid var(--color-border-2);background:var(--color-surface);color:var(--color-text);font-family:var(--font-body);font-size:0.95rem;outline:none;transition:border-color var(--trans-base);" />
-              </div>
-            </div>
-
-            <div style="display:flex;flex-direction:column;gap:6px;">
-              <label for="horario" style="font-size:0.85rem;font-weight:600;color:var(--color-text-2);">Melhor horário para contato *</label>
-              <select id="horario" name="horario" required
-                style="padding:14px 18px;border-radius:var(--radius-md);border:1px solid var(--color-border-2);background:var(--color-surface);color:var(--color-text);font-family:var(--font-body);font-size:0.95rem;outline:none;transition:border-color var(--trans-base);appearance:auto;">
+            <div class="form-field">
+              <label for="horario">Melhor horário para contato *</label>
+              <select id="horario" name="horario" required>
                 <option value="">Selecione um horário</option>
                 <option value="Manhã">Manhã</option>
                 <option value="Tarde">Tarde</option>
@@ -84,10 +76,9 @@
               </select>
             </div>
 
-            <div style="display:flex;flex-direction:column;gap:6px;">
-              <label for="vidas" style="font-size:0.85rem;font-weight:600;color:var(--color-text-2);">Número de vidas no plano de saúde *</label>
-              <select id="vidas" name="vidas" required
-                style="padding:14px 18px;border-radius:var(--radius-md);border:1px solid var(--color-border-2);background:var(--color-surface);color:var(--color-text);font-family:var(--font-body);font-size:0.95rem;outline:none;transition:border-color var(--trans-base);appearance:auto;">
+            <div class="form-field">
+              <label for="vidas">Número de vidas no plano de saúde *</label>
+              <select id="vidas" name="vidas" required>
                 <option value="">Selecione a quantidade</option>
                 <option value="Até 10 vidas">Até 10 vidas</option>
                 <option value="11 a 30 vidas">11 a 30 vidas</option>
