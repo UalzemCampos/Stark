@@ -99,6 +99,12 @@ img, svg {
   max-width: 100%;
 }
 
+.icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -217,7 +223,7 @@ button {
   font-size: 1.05rem;
   color: var(--color-text-2);
   line-height: 1.75;
-  max-width: 640px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
@@ -842,8 +848,8 @@ button {
 
 .hero__card-value {
   font-family: var(--font-heading);
-  font-size: 1.8rem;
-  font-weight: 800;
+  font-size: 2.6rem;
+  font-weight: 900;
   line-height: 1;
 }
 
@@ -853,8 +859,8 @@ button {
 
 .hero__card-mini-text {
   font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 800;
   color: var(--color-text);
   margin-top: 10px;
 }
@@ -1098,24 +1104,30 @@ button {
 .process__layout {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 72px;
+  gap: 48px;
   align-items: start;
 }
 
 @media (min-width: 1024px) {
   .process__layout {
-    grid-template-columns: 1fr 1.3fr;
-    gap: 100px;
+    grid-template-columns: 1fr;
+    gap: 48px;
   }
 }
 
-.process__left .section-title {
-  text-align: left;
+.process__header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
 }
 
-.process__left .section-subtitle {
-  text-align: left;
-  margin: 0 0 40px;
+.process__header .section-title {
+  text-align: center;
+}
+
+.process__header .section-subtitle {
+  text-align: center;
+  margin: 0 auto 40px;
 }
 
 /* Steps */
