@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stark Health | Diagnóstico Gratuito</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+
+<body>
+
+  <header id="header" class="header" role="banner">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="Stark Health - Página Inicial">
+        <img src="logos/logoUse2.png" alt="Stark Health Logo" width="160" height="52" />
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section style="min-height:100vh;display:flex;align-items:center;padding-top:100px;padding-bottom:80px;background:var(--grad-hero);">
+      <div class="container" style="width:100%;">
+        <div style="max-width:640px;margin:0 auto;">
+
+          <div style="text-align:center;margin-bottom:48px;">
+            <div class="section-badge" style="display:inline-flex;">Diagnóstico Gratuito</div>
+            <h1 class="section-title" style="font-size:clamp(1.8rem,4vw,2.6rem);">
+              Solicite um diagnóstico<br />
+              <span class="gradient-text">gratuito da sua carteira</span>
+            </h1>
+            <p class="section-subtitle" style="max-width:480px;">
+              Preencha os dados abaixo e nossa equipe entrará em contato para apresentar as melhores soluções para a sua empresa.
+            </p>
+          </div>
+
+          <form id="contactForm" style="display:flex;flex-direction:column;gap:20px;">
+
+            <div style="display:grid;grid-template-columns:1fr;gap:20px;">
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <label for="nome" style="font-size:0.85rem;font-weight:600;color:var(--color-text-2);">Nome completo *</label>
+                <input type="text" id="nome" name="nome" required
+                  style="padding:14px 18px;border-radius:var(--radius-md);border:1px solid var(--color-border-2);background:var(--color-surface);color:var(--color-text);font-family:var(--font-body);font-size:0.95rem;outline:none;transition:border-color var(--trans-base);" />
+              </div>
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <label for="empresa" style="font-size:0.85rem;font-weight:600;color:var(--color-text-2);">Empresa *</label>
+                <input type="text" id="empresa" name="empresa" required
+                  style="padding:14px 18px;border-radius:var(--radius-md);border:1px solid var(--color-border-2);background:var(--color-surface);color:var(--color-text);font-family:var(--font-body);font-size:0.95rem;outline:none;transition:border-color var(--trans-base);" />
+              </div>
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <label for="cargo" style="font-size:0.85rem;font-weight:600;color:var(--color-text-2);">Cargo *</label>
+                <input type="text" id="cargo" name="cargo" required
+                  style="padding:14px 18px;border-radius:var(--radius-md);border:1px solid var(--color-border-2);background:var(--color-surface);color:var(--color-text);font-family:var(--font-body);font-size:0.95rem;outline:none;transition:border-color var(--trans-base);" />
+              </div>
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <label for="email" style="font-size:0.85rem;font-weight:600;color:var(--color-text-2);">E-mail corporativo *</label>
+                <input type="email" id="email" name="email" required
+                  style="padding:14px 18px;border-radius:var(--radius-md);border:1px solid var(--color-border-2);background:var(--color-surface);color:var(--color-text);font-family:var(--font-body);font-size:0.95rem;outline:none;transition:border-color var(--trans-base);" />
+              </div>
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <label for="celular" style="font-size:0.85rem;font-weight:600;color:var(--color-text-2);">Celular *</label>
+                <input type="tel" id="celular" name="celular" required
+                  style="padding:14px 18px;border-radius:var(--radius-md);border:1px solid var(--color-border-2);background:var(--color-surface);color:var(--color-text);font-family:var(--font-body);font-size:0.95rem;outline:none;transition:border-color var(--trans-base);" />
+              </div>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label for="horario" style="font-size:0.85rem;font-weight:600;color:var(--color-text-2);">Melhor horário para contato *</label>
+              <select id="horario" name="horario" required
+                style="padding:14px 18px;border-radius:var(--radius-md);border:1px solid var(--color-border-2);background:var(--color-surface);color:var(--color-text);font-family:var(--font-body);font-size:0.95rem;outline:none;transition:border-color var(--trans-base);appearance:auto;">
+                <option value="">Selecione um horário</option>
+                <option value="Manhã">Manhã</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Noite">Noite</option>
+              </select>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label for="vidas" style="font-size:0.85rem;font-weight:600;color:var(--color-text-2);">Número de vidas no plano de saúde *</label>
+              <select id="vidas" name="vidas" required
+                style="padding:14px 18px;border-radius:var(--radius-md);border:1px solid var(--color-border-2);background:var(--color-surface);color:var(--color-text);font-family:var(--font-body);font-size:0.95rem;outline:none;transition:border-color var(--trans-base);appearance:auto;">
+                <option value="">Selecione a quantidade</option>
+                <option value="Até 10 vidas">Até 10 vidas</option>
+                <option value="11 a 30 vidas">11 a 30 vidas</option>
+                <option value="31 a 100 vidas">31 a 100 vidas</option>
+                <option value="101 a 500 vidas">101 a 500 vidas</option>
+                <option value="Mais de 500 vidas">Mais de 500 vidas</option>
+              </select>
+            </div>
+
+            <!-- Cloudflare Turnstile -->
+            <div style="display:flex;justify-content:center;margin:8px 0;">
+              <div class="cf-turnstile" data-sitekey="0x4AAAAAAA0jE8i1P7RMLZCZ" data-theme="dark"></div>
+            </div>
+
+            <div id="formError" style="display:none;padding:12px 16px;border-radius:var(--radius-md);background:rgba(255,70,70,0.1);border:1px solid rgba(255,70,70,0.3);color:#ff6666;font-size:0.9rem;text-align:center;"></div>
+
+            <button type="submit" class="btn btn--primary btn--lg" style="width:100%;justify-content:center;margin-top:8px;" id="submitBtn">
+              Quero falar com um especialista
+            </button>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" aria-label="Stark Health - Voltar ao topo">
+            <img src="logos/logoUse2.png" alt="Stark Health" width="140" height="46" />
+          </a>
+          <p class="footer__tagline">O melhor caminho para o melhor cuidado.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Navegação rodapé">
+          <h3 class="footer__nav-title">Navegação</h3>
+          <ul class="footer__nav-list">
+            <li><a href="index.html#solucoes" class="footer__nav-link">Soluções</a></li>
+            <li><a href="index.html#como-atuamos" class="footer__nav-link">Como Atuamos</a></li>
+            <li><a href="index.html#numeros" class="footer__nav-link">Números da Stark</a></li>
+            <li><a href="index.html#contato" class="footer__nav-link">Contato</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contact">
+          <h3 class="footer__nav-title">Contato</h3>
+          <div class="footer__contact-list">
+            <a href="https://wa.me/5511989102784" target="_blank" rel="noopener noreferrer" class="footer__contact-item">
+              <img src="icons/VERDE/WHATSAPP.png" alt="" style="width:18px;height:18px" />
+              (11) 98910-2784
+            </a>
+            <a href="https://instagram.com/starkhealthconsultoria" target="_blank" rel="noopener noreferrer" class="footer__contact-item">
+              <img src="icons/VERDE/INSTAGRAM.png" alt="" style="width:18px;height:18px" />
+              @starkhealthconsultoria
+            </a>
+            <a href="https://linkedin.com/company/stark-health" target="_blank" rel="noopener noreferrer" class="footer__contact-item">
+              <img src="icons/VERDE/LINKEDIN.png" alt="" style="width:18px;height:18px" />
+              Stark Health
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; <span id="year"></span> Stark Health. Todos os direitos reservados.</p>
+        <p class="footer__legal">Gestão médica estratégica para empresas e corretoras.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init('YOUR_EMAILJS_PUBLIC_KEY'); // <-- Substituir pela chave pública do EmailJS
+    })();
+  </script>
+  <script src="formulario.js"></script>
+</body>
+
+</html>
