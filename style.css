@@ -1421,23 +1421,31 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 18px 32px;
+  width: 200px;
+  height: 70px;
+  padding: 12px 24px;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--color-text-2);
-  white-space: nowrap;
   transition: all var(--trans-base);
-  letter-spacing: 0.03em;
+  flex-shrink: 0;
 }
 
 .logo-item:hover {
   border-color: var(--color-border-2);
-  color: var(--color-text);
   background: var(--color-surface-2);
+}
+
+.logo-item img {
+  max-height: 32px;
+  max-width: 100%;
+  object-fit: contain;
+  filter: grayscale(1) brightness(1.6) opacity(0.7);
+  transition: all var(--trans-base);
+}
+
+.logo-item:hover img {
+  filter: grayscale(0) brightness(1) opacity(1);
 }
 
 
