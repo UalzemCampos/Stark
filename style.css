@@ -547,6 +547,7 @@ button {
 @media (max-width: 1023px) {
   .header__nav {
     display: flex;
+    flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
