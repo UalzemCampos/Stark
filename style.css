@@ -284,7 +284,10 @@ button {
   transition: all var(--trans-slow);
   position: relative;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
+  max-width: 100%;
+  text-align: center;
 }
 
 .btn::before {
@@ -361,6 +364,13 @@ button {
 .btn--xl {
   padding: 20px 48px;
   font-size: 1.1rem;
+}
+
+@media (max-width: 480px) {
+  .btn--xl {
+    padding: 16px 24px;
+    font-size: 1rem;
+  }
 }
 
 
