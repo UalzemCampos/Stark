@@ -512,6 +512,8 @@ button {
   width: 32px;
   padding: 4px;
   margin-left: auto;
+  z-index: 1100;
+  position: relative;
 }
 
 .header__menu-toggle span {
@@ -541,39 +543,85 @@ button {
   }
 }
 
-/* Mobile Nav */
+/* Mobile Nav Overlay */
 @media (max-width: 1023px) {
   .header__nav {
-    display: none;
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(10, 10, 18, 0.98);
-    backdrop-filter: blur(20px);
-    padding-top: 100px;
-    align-items: flex-start;
+    z-index: 1050;
+    background: rgba(10, 10, 18, 0.97);
+    backdrop-filter: blur(24px) saturate(1.4);
+    -webkit-backdrop-filter: blur(24px) saturate(1.4);
+    padding: 0;
+    align-items: center;
     justify-content: center;
-    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
   }
 
   .header__nav.mobile-open {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
   }
 
   .header__nav-list {
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
     width: 100%;
-    padding: 0 40px;
-    align-items: flex-start;
+    max-width: 320px;
+    padding: 0 24px;
+    align-items: center;
+    text-align: center;
   }
 
   .header__nav-link {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-family: var(--font-heading);
     font-weight: 700;
+    color: var(--color-text-2);
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    width: 100%;
+    display: block;
+    transition: all var(--trans-base);
+  }
+
+  .header__nav-link:hover,
+  .header__nav-link:focus {
+    color: var(--color-green);
+    background: rgba(49, 255, 176, 0.06);
+  }
+
+  .header__nav-link::after {
+    display: none;
+  }
+
+  .header__nav-link.active {
+    color: var(--color-green);
+  }
+
+  /* Botão CTA dentro do menu mobile fica visível e centralizado */
+  .header__inner > .btn.btn--sm {
+    display: none;
+  }
+
+  .header__nav .mobile-cta {
+    display: block;
+    margin-top: 16px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__nav .mobile-cta {
+    display: none;
   }
 }
 
