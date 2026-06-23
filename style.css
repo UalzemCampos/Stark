@@ -3,12 +3,9 @@
    Dark Theme Premium One Page
    =================================================== */
 
-/* ─── GOOGLE FONTS ─── */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
-
-/* ─── FONTS NOTE ─── */
-/* Adobe Fonts (Typekit) - Noka & Switzer are the client's primary choice. */
-/* Google Fonts fallback: Outfit (≈ Noka) + Plus Jakarta Sans (≈ Switzer) */
+/* ─── FONTES PAGAS: Noka + Switzer ─── */
+@import url('fonts/Noka/noka.css');
+@import url('fonts/Switzer/switzer.css');
 
 /* ─── CSS CUSTOM PROPERTIES ─── */
 :root {
@@ -45,8 +42,8 @@
   --grad-text:        linear-gradient(135deg, #31ffb0 0%, #3375ff 60%, #a855f7 100%);
 
   /* Typography */
-  --font-heading:     'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
-  --font-body:        'Plus Jakarta Sans', 'Outfit', system-ui, sans-serif;
+  --font-heading:     'Noka', system-ui, sans-serif;
+  --font-body:        'Switzer-Variable', 'Switzer-Regular', system-ui, sans-serif;
 
   /* Spacing */
   --container-max:    1280px;

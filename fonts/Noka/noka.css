@@ -1,0 +1,43 @@
+/* =========================================
+   Noka Font Family — Fontes Pagas
+   ========================================= */
+
+@font-face {
+  font-family: 'Noka';
+  src: url('Noka-Light.otf') format('opentype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noka';
+  src: url('Noka-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noka';
+  src: url('Noka-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noka';
+  src: url('Noka-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noka';
+  src: url('Noka-Black.otf') format('opentype');
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
