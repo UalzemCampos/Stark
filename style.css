@@ -288,6 +288,21 @@ button {
   box-shadow: 0 4px 20px rgba(49, 255, 176, 0.15);
 }
 
+.btn--hero-secondary {
+  background: rgba(51, 117, 255, 0.15);
+  color: var(--color-blue-mid);
+  border-color: rgba(51, 117, 255, 0.3);
+  font-weight: 600;
+}
+
+.btn--hero-secondary:hover {
+  background: rgba(51, 117, 255, 0.25);
+  border-color: rgba(51, 117, 255, 0.5);
+  color: #6699ff;
+  box-shadow: 0 4px 24px rgba(0, 73, 255, 0.25);
+  transform: translateY(-2px);
+}
+
 .btn--sm {
   padding: 10px 22px;
   font-size: 0.875rem;
