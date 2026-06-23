@@ -1027,23 +1027,6 @@ button {
   opacity: 1;
 }
 
-.solution-card__number {
-  font-family: var(--font-heading);
-  font-size: 3rem;
-  font-weight: 800;
-  color: rgba(255, 255, 255, 0.04);
-  position: absolute;
-  top: 16px;
-  right: 20px;
-  line-height: 1;
-  letter-spacing: -0.05em;
-  transition: color var(--trans-base);
-}
-
-.solution-card:hover .solution-card__number {
-  color: rgba(49, 255, 176, 0.08);
-}
-
 .solution-card__icon {
   width: 52px;
   height: 52px;
