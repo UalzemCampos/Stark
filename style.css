@@ -1100,17 +1100,10 @@ button {
 }
 
 .process__layout {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 48px;
-  align-items: start;
-}
-
-@media (min-width: 1024px) {
-  .process__layout {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
+  align-items: center;
 }
 
 .process__header {
@@ -1128,8 +1121,23 @@ button {
   margin: 0 auto 40px;
 }
 
-/* Steps */
-.process__steps {
+/* Grid Steps */
+.process__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  width: 100%;
+  max-width: 960px;
+}
+
+@media (min-width: 768px) {
+  .process__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+}
+
+.process__grid-col {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -1168,15 +1176,8 @@ button {
   height: 70%;
 }
 
-.process__step-num {
-  font-family: var(--font-heading);
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--color-text-3);
-  letter-spacing: 0.1em;
-  min-width: 28px;
-  padding-top: 3px;
-  display: none;
+.process__step--full {
+  max-width: 472px;
 }
 
 .process__step-content {
