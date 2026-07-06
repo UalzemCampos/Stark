@@ -4,6 +4,72 @@
    =================================================== */
 
 /* ─── FONTES PAGAS: Noka + Switzer ─── */
+
+/* Light / Hybrid Theme Variables */
+:root {
+  --color-bg-light: #f5f5f0;
+  --color-surface-light: #ffffff;
+  --color-text-light: #1a1a2e;
+  --color-text-2-light: #555577;
+  --color-text-3-light: #8888aa;
+  --color-border-light: rgba(0, 0, 0, 0.07);
+  --color-border-2-light: rgba(0, 0, 0, 0.12);
+  --color-accent-green: #00b894;
+  --color-accent-green-glow: rgba(0, 184, 148, 0.15);
+  --color-accent-blue: #0055ff;
+  --color-accent-blue-mid: #3375ff;
+  --color-accent-blue-glow: rgba(0, 85, 255, 0.20);
+  --shadow-sm-light: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md-light: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --shadow-lg-light: 0 20px 60px rgba(0, 0, 0, 0.10);
+}
+
+.theme-light {
+  --color-bg: var(--color-bg-light);
+  --color-surface: var(--color-surface-light);
+  --color-text: var(--color-text-light);
+  --color-text-2: var(--color-text-2-light);
+  --color-text-3: var(--color-text-3-light);
+  --color-border: var(--color-border-light);
+  --color-border-2: var(--color-border-2-light);
+  --shadow-sm: var(--shadow-sm-light);
+  --shadow-md: var(--shadow-md-light);
+  --shadow-lg: var(--shadow-lg-light);
+}
+
+/* Light / Hybrid Theme Utilities */
+.solution-card,
+.process__step {
+  background: var(--color-surface-light);
+  border-color: var(--color-border-light);
+}
+
+.solution-card .solution-card__title,
+.process__step-title {
+  color: var(--color-text-light);
+}
+
+.solution-card .solution-card__desc,
+.process__step-desc {
+  color: var(--color-text-2-light);
+}
+
+.section-badge {
+  border-color: rgba(0, 184, 148, 0.3);
+  background: rgba(0, 184, 148, 0.06);
+  color: var(--color-accent-green);
+}
+
+.btn--primary {
+  background: var(--color-accent-green);
+  color: var(--color-bg);
+}
+
+.btn--outline {
+  color: var(--color-text);
+  border-color: var(--color-border-2);
+}
+
 @import url('fonts/Noka/noka.css');
 @import url('fonts/Switzer/switzer.css');
 
