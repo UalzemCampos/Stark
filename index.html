@@ -72,7 +72,7 @@
   <header id="header" class="header" role="banner">
     <div class="container header__inner">
       <a href="#hero" class="header__logo" aria-label="Stark Health - Página Inicial">
-        <img src="logos/logoUse2.png" alt="Stark Health Logo" width="160" height="52" />
+        <img id="headerLogo" src="logos/logoUse2.png" alt="Stark Health Logo" width="160" height="52" />
       </a>
 
       <button class="header__menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false"
@@ -110,23 +110,23 @@
       <div class="hero__bg-glow hero__bg-glow--2" aria-hidden="true"></div>
       <div class="hero__bg-glow hero__bg-glow--3" aria-hidden="true"></div>
 
-      <!-- Animated grid lines -->
       <div class="hero__grid" aria-hidden="true"></div>
 
       <div class="container hero__inner">
         <div class="hero__content" data-animate="fade-up">
           <div class="hero__badge" data-animate="fade-down" data-delay="100">
             <span class="hero__badge-dot" aria-hidden="true"></span>
-            Diagnóstico Gratuito
+            Diagnóstico Estratégico
           </div>
 
           <h1 id="hero-title" class="hero__title" data-animate="fade-up" data-delay="200">
-            Cuidamos da saúde financeira e<br />
-            <span class="gradient-text">sua empresa</span>
+            Inteligência médica para decisões mais seguras e uma gestão mais eficiente do plano de saúde da sua empresa.
           </h1>
 
           <p class="hero__subtitle" data-animate="fade-up" data-delay="350">
-            Reduza custos do plano de saúde sem comprometer a qualidade do cuidado. Auditoria, consultoria e gestão — tudo em um só lugar.
+            A Stark atua como a área médica estratégica da sua empresa, apoiando a gestão do plano de saúde com
+            inteligência médica, auditoria especializada, gestão assistencial e análises que reduzem custos, aumentam a
+            previsibilidade e tornam as decisões mais seguras.
           </p>
 
           <div class="hero__ctas" data-animate="fade-up" data-delay="500">
@@ -140,6 +140,10 @@
           <div class="hero__image-wrapper">
             <img src="newImages/Imagem de capa do site Stark Health.webp" alt="" class="hero__image" />
             <div class="hero__image-overlay"></div>
+            <div class="hero__floating-card">
+              <span class="hero__floating-card-label">Inteligência médica</span>
+              <strong>Decisões mais seguras para o seu plano.</strong>
+            </div>
           </div>
         </div>
       </div>
@@ -185,7 +189,7 @@
           </article>
 
           <article class="solution-card" data-animate="fade-up" data-delay="80" role="listitem">
-                        <div class="solution-card__icon" aria-hidden="true">
+            <div class="solution-card__icon" aria-hidden="true">
               <img src="icons/VERDE/DOCUMENTO.png" alt="" class="icon-img" style="width:28px;height:28px" />
             </div>
             <h3 class="solution-card__title">Inteligência para Negociação</h3>
@@ -195,7 +199,7 @@
           </article>
 
           <article class="solution-card" data-animate="fade-up" data-delay="160" role="listitem">
-                        <div class="solution-card__icon" aria-hidden="true">
+            <div class="solution-card__icon" aria-hidden="true">
               <img src="icons/VERDE/DADOS.png" alt="" class="icon-img" style="width:28px;height:28px" />
             </div>
             <h3 class="solution-card__title">Gestão Estratégica da Carteira</h3>
@@ -205,7 +209,7 @@
           </article>
 
           <article class="solution-card" data-animate="fade-up" data-delay="240" role="listitem">
-                        <div class="solution-card__icon" aria-hidden="true">
+            <div class="solution-card__icon" aria-hidden="true">
               <img src="icons/VERDE/RH.png" alt="" class="icon-img" style="width:28px;height:28px" />
             </div>
             <h3 class="solution-card__title">Apoio Especializado ao RH</h3>
@@ -215,7 +219,7 @@
           </article>
 
           <article class="solution-card" data-animate="fade-up" data-delay="320" role="listitem">
-                        <div class="solution-card__icon" aria-hidden="true">
+            <div class="solution-card__icon" aria-hidden="true">
               <img src="icons/VERDE/AUDITORIA.png" alt="" class="icon-img" style="width:28px;height:28px" />
             </div>
             <h3 class="solution-card__title">Auditoria Médica e Financeira</h3>
@@ -225,7 +229,7 @@
           </article>
 
           <article class="solution-card" data-animate="fade-up" data-delay="400" role="listitem">
-                        <div class="solution-card__icon" aria-hidden="true">
+            <div class="solution-card__icon" aria-hidden="true">
               <img src="icons/VERDE/CONCIERGE.png" alt="" class="icon-img" style="width:28px;height:28px" />
             </div>
             <h3 class="solution-card__title">Concierge Assistencial</h3>
@@ -235,7 +239,7 @@
           </article>
 
           <article class="solution-card" data-animate="fade-up" data-delay="480" role="listitem">
-                        <div class="solution-card__icon" aria-hidden="true">
+            <div class="solution-card__icon" aria-hidden="true">
               <img src="icons/VERDE/DADOS.png" alt="" class="icon-img" style="width:28px;height:28px" />
             </div>
             <h3 class="solution-card__title">Business Intelligence em Saúde</h3>
@@ -245,7 +249,7 @@
           </article>
 
           <article class="solution-card" data-animate="fade-up" data-delay="560" role="listitem">
-                        <div class="solution-card__icon" aria-hidden="true">
+            <div class="solution-card__icon" aria-hidden="true">
               <img src="icons/VERDE/SAÚDE.png" alt="" class="icon-img" style="width:28px;height:28px" />
             </div>
             <h3 class="solution-card__title">Promoção e Gestão da Saúde</h3>
@@ -266,124 +270,73 @@
       <div class="process__bg" aria-hidden="true"></div>
 
       <div class="container">
-        <div class="process__layout">
+        <div class="section-header" data-animate="fade-up">
+          <div class="section-badge">Como Atuamos</div>
+          <h2 id="process-title" class="section-title">
+            Três pilares para uma gestão de saúde<br />
+            <span class="gradient-text">mais estratégica e sustentável</span>
+          </h2>
+          <p class="section-subtitle">
+            A Stark atua como a área médica estratégica da sua empresa, unindo consultoria, auditoria e gestão para
+            reduzir custos, aumentar previsibilidade e apoiar decisões mais seguras.
+          </p>
+        </div>
 
-          <div class="process__header" data-animate="fade-up">
-            <div class="section-badge">Como Atuamos</div>
-            <h2 id="process-title" class="section-title">
-              Como a STARK atua<br />
-              dentro da sua operação
-            </h2>
-            <p class="section-subtitle">
-              Unimos inteligência médica, análise técnica e gestão especializada<br />
-              para criar uma estrutura sólida de apoio à sua empresa.
-            </p>
-            <a href="https://wa.me/5511989102784?text=Olá!%20Quero%20saber%20mais%20sobre%20como%20a%20Stark%20Health%20atua."
-              target="_blank" rel="noopener noreferrer" class="btn btn--primary" id="cta-process">
-              Falar com um Especialista
-            </a>
-          </div>
-
-          <div class="process__grid">
-            <div class="process__grid-col">
-
-              <div class="process__step" data-animate="fade-up" data-delay="100">
-                <div class="process__step-content">
-                  <div class="process__step-icon" aria-hidden="true">
-                    <img src="icons/AZUL_CLARO/ALVO.png" alt="" style="width:24px;height:24px" />
-                  </div>
-                  <div>
-                    <h3 class="process__step-title">Diagnóstico Estratégico</h3>
-                    <p class="process__step-desc">Análise detalhada da carteira, perfil assistencial, custos,
-                      sinistralidade e oportunidades de melhoria.</p>
-                  </div>
-                </div>
+        <div class="pillars__grid" role="list">
+          <article class="pillar-card" data-animate="fade-up" data-delay="0" role="listitem">
+            <div class="pillar-card__header">
+              <div class="pillar-card__icon" aria-hidden="true">
+                <img src="icons/VERDE/MÉDICO.png" alt="" class="icon-img" style="width:28px;height:28px" />
               </div>
-
-              <div class="process__step" data-animate="fade-up" data-delay="200">
-                <div class="process__step-content">
-                  <div class="process__step-icon" aria-hidden="true">
-                    <img src="icons/AZUL_CLARO/REUNIÃO.png" alt="" style="width:24px;height:24px" />
-                  </div>
-                  <div>
-                    <h3 class="process__step-title">Comitês Técnicos e Médicos</h3>
-                    <p class="process__step-desc">Discussão contínua dos principais indicadores, casos complexos e
-                      estratégias para otimização dos resultados.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="process__step" data-animate="fade-up" data-delay="300">
-                <div class="process__step-content">
-                  <div class="process__step-icon" aria-hidden="true">
-                    <img src="icons/AZUL_CLARO/AUDITORIA.png" alt="" style="width:24px;height:24px" />
-                  </div>
-                  <div>
-                    <h3 class="process__step-title">Auditoria e Regulação Especializada</h3>
-                    <p class="process__step-desc">Avaliações técnicas voltadas para utilização adequada dos recursos
-                      assistenciais, procedimentos, reembolsos e processos de autorização.</p>
-                  </div>
-                </div>
-              </div>
-
+              <h3 class="pillar-card__title">Consultoria em Saúde</h3>
             </div>
-            <div class="process__grid-col">
+            <p class="pillar-card__lead">Para otimizar seus recursos.</p>
+            <ul class="pillar-card__list">
+              <li class="pillar-card__item">Análise e reestruturação de rede assistencial</li>
+              <li class="pillar-card__item">Avaliação e renegociação de contratos com operadoras</li>
+              <li class="pillar-card__item">Precificação, sinistralidade e modelagem de planos</li>
+            </ul>
+            <div class="pillar-card__bar" aria-hidden="true"></div>
+          </article>
 
-              <div class="process__step" data-animate="fade-up" data-delay="400">
-                <div class="process__step-content">
-                  <div class="process__step-icon" aria-hidden="true">
-                    <img src="icons/AZUL_CLARO/RH.png" alt="" style="width:24px;height:24px" />
-                  </div>
-                  <div>
-                    <h3 class="process__step-title">Apoio Permanente à Operação</h3>
-                    <p class="process__step-desc">Suporte técnico contínuo para gestores, RHs, corretoras e equipes
-                      responsáveis pelos benefícios.</p>
-                  </div>
-                </div>
+          <article class="pillar-card pillar-card--featured" data-animate="fade-up" data-delay="100" role="listitem">
+            <div class="pillar-card__header">
+              <div class="pillar-card__icon" aria-hidden="true">
+                <img src="icons/VERDE/AUDITORIA.png" alt="" class="icon-img" style="width:28px;height:28px" />
               </div>
-
-              <div class="process__step" data-animate="fade-up" data-delay="500">
-                <div class="process__step-content">
-                  <div class="process__step-icon" aria-hidden="true">
-                    <img src="icons/AZUL_CLARO/CUIDADO.png" alt="" style="width:24px;height:24px" />
-                  </div>
-                  <div>
-                    <h3 class="process__step-title">Gestão Assistencial</h3>
-                    <p class="process__step-desc">Acompanhamento especializado de casos e apoio aos beneficiários em
-                      momentos críticos da jornada de saúde.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="process__step" data-animate="fade-up" data-delay="600">
-                <div class="process__step-content">
-                  <div class="process__step-icon" aria-hidden="true">
-                    <img src="icons/AZUL_CLARO/DADOS.png" alt="" style="width:24px;height:24px" />
-                  </div>
-                  <div>
-                    <h3 class="process__step-title">Inteligência para Tomada de Decisão</h3>
-                    <p class="process__step-desc">Relatórios executivos, dashboards e análises estratégicas que oferecem
-                      mais previsibilidade e controle.</p>
-                  </div>
-                </div>
-              </div>
-
+              <h3 class="pillar-card__title">Auditoria Técnica</h3>
             </div>
-          </div>
+            <p class="pillar-card__lead">Para a sustentabilidade do seu plano.</p>
+            <ul class="pillar-card__list">
+              <li class="pillar-card__item">Revisão analítica e auditoria de contas médicas</li>
+              <li class="pillar-card__item">Análise de glosas, sinistros e faturamento</li>
+              <li class="pillar-card__item">Governança, compliance e adequação regulatória</li>
+            </ul>
+            <div class="pillar-card__bar" aria-hidden="true"></div>
+          </article>
 
-          <div class="process__step process__step--full" data-animate="fade-up" data-delay="700">
-            <div class="process__step-content">
-              <div class="process__step-icon" aria-hidden="true">
-                <img src="icons/AZUL_CLARO/EQUIPE.png" alt="" style="width:24px;height:24px" />
+          <article class="pillar-card" data-animate="fade-up" data-delay="200" role="listitem">
+            <div class="pillar-card__header">
+              <div class="pillar-card__icon" aria-hidden="true">
+                <img src="icons/VERDE/SAÚDE.png" alt="" class="icon-img" style="width:28px;height:28px" />
               </div>
-              <div>
-                <h3 class="process__step-title">Equipe Multidisciplinar</h3>
-                <p class="process__step-desc">Especialistas em saúde suplementar. Profissionais com experiência médica,
-                  assistencial e estratégica atuando de forma integrada.</p>
-              </div>
+              <h3 class="pillar-card__title">Gestão de Saúde</h3>
             </div>
-          </div>
+            <p class="pillar-card__lead">Para cuidar dos seus colaboradores.</p>
+            <ul class="pillar-card__list">
+              <li class="pillar-card__item">Programas de gestão de doenças crônicas</li>
+              <li class="pillar-card__item">Promoção à saúde, bem-estar e prevenção</li>
+              <li class="pillar-card__item">Telemedicina, prontuário digital e canais de cuidado</li>
+            </ul>
+            <div class="pillar-card__bar" aria-hidden="true"></div>
+          </article>
+        </div>
 
+        <div class="pillars__cta" data-animate="fade-up" data-delay="300">
+          <a href="https://wa.me/5511989102784?text=Olá!%20Quero%20saber%20mais%20sobre%20como%20a%20Stark%20Health%20atua."
+            target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
+            Falar com um Especialista
+          </a>
         </div>
       </div>
     </section>
@@ -399,12 +352,21 @@
         <div class="section-header" data-animate="fade-up">
           <div class="section-badge">Números da Stark</div>
           <h2 id="numbers-title" class="section-title">
-            A confiança de quem escolheu fazer da saúde uma decisão estratégica.
+            Indicadores que sustentam decisões mais seguras e previsíveis.
           </h2>
           <p class="section-subtitle">
-            A Stark apoia empresas e corretoras na gestão de milhares de beneficiários em todo o Brasil, combinando conhecimento técnico,
-            inteligência de dados e acompanhamento especializado.
+            A Stark apoia empresas e corretoras na gestão de milhares de beneficiários em todo o Brasil com inteligência
+            médica, dados assistenciais e uma visão estratégica do plano de saúde.
           </p>
+        </div>
+
+        <div class="numbers__media" data-animate="fade-up" data-delay="100">
+          <img src="newImages/Imagem extra para uso no site Stark Health.webp" alt="" />
+          <div class="numbers__media-copy">
+            <h3>Mais de 180 mil vidas sob gestão</h3>
+            <p>Com atuação em 27 estados e foco em indicadores clínicos, financeiros e assistenciais, a Stark transforma
+              complexidade em previsibilidade para empresas e colaboradores.</p>
+          </div>
         </div>
 
         <div class="numbers__stats" role="list">
@@ -443,7 +405,8 @@
               <span class="counter">0</span>
             </div>
             <div class="numbers__stat-label">Foco em resultados</div>
-            <div class="numbers__stat-desc">Compromisso total com a sustentabilidade e previsibilidade da gestão de saúde
+            <div class="numbers__stat-desc">Compromisso total com a sustentabilidade e previsibilidade da gestão de
+              saúde
               dos nossos clientes.</div>
           </div>
 
@@ -452,28 +415,30 @@
         <!-- Logo Carousel -->
         <div class="logos-section" data-animate="fade-up" data-delay="200">
           <p class="logos-section__title">Empresas que confiam na Stark</p>
-          <div class="logos-carousel" aria-label="Logos de clientes: BB Tecnologia e Serviços, SESI, SENAI, Ampla Saúde, NeoSector, Fidelitas, Best Life, Solution Consultoria, Colombo">
+          <div class="logos-carousel"
+            aria-label="Logos de clientes: BB Tecnologia e Serviços, SESI, SENAI, Ampla Saúde, NeoSector, Fidelitas, Solution Consultoria">
             <div class="logos-track">
               <div class="logos-track__inner">
-                <div class="logo-item"><img src="logosParceiros/BB TECNOLOGIA E SERVIÇOS.png" alt="BB Tecnologia e Serviços" /></div>
+                <div class="logo-item"><img src="logosParceiros/BB TECNOLOGIA E SERVIÇOS.png"
+                    alt="BB Tecnologia e Serviços" /></div>
                 <div class="logo-item"><img src="logosParceiros/SESI.png" alt="SESI" /></div>
                 <div class="logo-item"><img src="logosParceiros/SENAI.png" alt="SENAI" /></div>
                 <div class="logo-item"><img src="logosParceiros/AMPLA.png" alt="Ampla Saúde" /></div>
                 <div class="logo-item"><img src="logosParceiros/NEOSECTOR.png" alt="NeoSector" /></div>
                 <div class="logo-item"><img src="logosParceiros/Fidelitas.png" alt="Fidelitas" /></div>
-                <div class="logo-item"><img src="logosParceiros/BEST LIFE.png" alt="Best Life" /></div>
                 <div class="logo-item"><img src="logosParceiros/SOLUTION 20.png" alt="Solution Consultoria" /></div>
-                <div class="logo-item"><img src="logosParceiros/COLOMBO.png" alt="Colombo" /></div>
                 <!-- Duplicates for infinite loop -->
-                <div class="logo-item" aria-hidden="true"><img src="logosParceiros/BB TECNOLOGIA E SERVIÇOS.png" alt="BB Tecnologia e Serviços" /></div>
+                <div class="logo-item" aria-hidden="true"><img src="logosParceiros/BB TECNOLOGIA E SERVIÇOS.png"
+                    alt="BB Tecnologia e Serviços" /></div>
                 <div class="logo-item" aria-hidden="true"><img src="logosParceiros/SESI.png" alt="SESI" /></div>
                 <div class="logo-item" aria-hidden="true"><img src="logosParceiros/SENAI.png" alt="SENAI" /></div>
                 <div class="logo-item" aria-hidden="true"><img src="logosParceiros/AMPLA.png" alt="Ampla Saúde" /></div>
-                <div class="logo-item" aria-hidden="true"><img src="logosParceiros/NEOSECTOR.png" alt="NeoSector" /></div>
-                <div class="logo-item" aria-hidden="true"><img src="logosParceiros/Fidelitas.png" alt="Fidelitas" /></div>
-                <div class="logo-item" aria-hidden="true"><img src="logosParceiros/BEST LIFE.png" alt="Best Life" /></div>
-                <div class="logo-item" aria-hidden="true"><img src="logosParceiros/SOLUTION 20.png" alt="Solution Consultoria" /></div>
-                <div class="logo-item" aria-hidden="true"><img src="logosParceiros/COLOMBO.png" alt="Colombo" /></div>
+                <div class="logo-item" aria-hidden="true"><img src="logosParceiros/NEOSECTOR.png" alt="NeoSector" />
+                </div>
+                <div class="logo-item" aria-hidden="true"><img src="logosParceiros/Fidelitas.png" alt="Fidelitas" />
+                </div>
+                <div class="logo-item" aria-hidden="true"><img src="logosParceiros/SOLUTION 20.png"
+                    alt="Solution Consultoria" /></div>
               </div>
             </div>
           </div>
@@ -493,20 +458,19 @@
 
       <div class="container">
         <div class="cta-section__inner" data-animate="fade-up">
-          <div class="section-badge">Vamos Conversar</div>
+          <div class="section-badge">Diagnóstico Estratégico</div>
           <h2 id="cta-title" class="cta-section__title">
-            Transforme a gestão de saúde <br />em uma
-            <span class="gradient-text">vantagem estratégica</span>
-            para a sua empresa.
+            Inteligência médica para decisões mais seguras e uma gestão mais eficiente do plano de saúde da sua empresa.
           </h2>
           <p class="cta-section__subtitle">
-            Conte com uma estrutura técnica especializada para apoiar decisões, otimizar recursos e entregar mais valor
-            para colaboradores, beneficiários e gestores.
+            A Stark atua como a área médica estratégica da sua empresa, apoiando a gestão do plano de saúde com
+            inteligência médica, auditoria especializada, gestão assistencial e análises que reduzem custos, aumentam a
+            previsibilidade e tornam as decisões mais seguras.
           </p>
 
-          <a href="https://wa.me/5511989102784?text=Olá!%20Gostaria%20de%20agendar%20uma%20conversa%20estratégica%20com%20a%20Stark%20Health."
+          <a href="https://wa.me/5511989102784?text=Olá!%20Gostaria%20de%20agendar%20um%20diagnóstico%20estratégico%20com%20a%20Stark%20Health."
             target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--xl" id="cta-final">
-            Vamos agendar uma conversa estratégica
+            Agendar um Diagnóstico Estratégico
           </a>
 
           <div class="cta-section__contacts" role="list" aria-label="Informações de contato da Stark Health">

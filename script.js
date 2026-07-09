@@ -22,13 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
 // ═══════════════════════════════════════
 function initHeader() {
   const header = document.getElementById('header');
+  const logo = document.getElementById('headerLogo');
   if (!header) return;
 
   const onScroll = () => {
-    if (window.scrollY > 60) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
+    const scrolled = window.scrollY > 60;
+
+    header.classList.toggle('scrolled', scrolled);
+
+    if (logo) {
+      logo.src = scrolled ? 'logos/logoUse.png' : 'logos/logoUse2.png';
     }
   };
 
