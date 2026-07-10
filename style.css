@@ -729,8 +729,34 @@ button {
   position: relative;
   padding-top: 100px;
   padding-bottom: 80px;
-  background: var(--grad-hero);
   overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('newImages/backHero.webp') center center / cover no-repeat;
+  filter: brightness(0.6) saturate(0.85);
+  will-change: transform;
+
+  @media (max-width: 768px) {
+    background-position: left center;
+  }
+}
+
+/* Dark overlay on top of the image for readability */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(7, 19, 31, 0.55) 0%,
+    rgba(17, 36, 63, 0.40) 45%,
+    rgba(21, 58, 94, 0.35) 100%
+  );
+  pointer-events: none;
 }
 
 /* BG Glows */
@@ -953,10 +979,7 @@ button {
 
 /* Hero Visual */
 .hero__visual {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
 }
 
 .hero__image-wrapper {
@@ -994,6 +1017,13 @@ button {
   backdrop-filter: blur(18px);
   box-shadow: 0 14px 40px rgba(5, 20, 40, 0.18);
   max-width: 240px;
+
+  @media (max-width: 768px) {
+    .hero__floating-card {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .hero__floating-card-label {
