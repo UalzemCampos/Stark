@@ -737,7 +737,6 @@ button {
   position: absolute;
   inset: 0;
   background: url('newImages/backHero.webp') center center / cover no-repeat;
-  filter: brightness(0.6) saturate(0.85);
   will-change: transform;
 
   @media (max-width: 768px) {
@@ -745,18 +744,27 @@ button {
   }
 }
 
-/* Dark overlay on top of the image for readability */
 .hero::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(7, 19, 31, 0.55) 0%,
-    rgba(17, 36, 63, 0.40) 45%,
-    rgba(21, 58, 94, 0.35) 100%
-  );
+  background: linear-gradient(90deg, #11243f 0%, rgba(17, 36, 63, 0.85) 45%, transparent 70%);
   pointer-events: none;
+  z-index: 0;
+}
+
+/* Dark overlay on top of the image for readability */
+/* Removed full-screen overlay; using gradient on text area instead */
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+  padding-left: 5%;
+}
+
+.hero__content::before {
+  display: none;
 }
 
 /* BG Glows */
@@ -917,7 +925,7 @@ button {
 .hero__title {
   font-family: var(--font-heading);
   font-size: clamp(1.6rem, 3.8vw, 2.7rem);
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.03em;
   color: #ffffff;
