@@ -925,7 +925,7 @@ button {
 .hero__title {
   font-family: var(--font-heading);
   font-size: clamp(1.6rem, 3.8vw, 2.7rem);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.15;
   letter-spacing: -0.03em;
   color: #ffffff;
